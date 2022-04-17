@@ -37,7 +37,7 @@
             </ImageView>
             <HBox layoutX="239.0" layoutY="22.0" prefHeight="100.0" prefWidth="740.0">
                <children>
-                  <Button fx:id="jobs" mnemonicParsing="false" onAction="#showJobs" prefHeight="32.0" prefWidth="137.0" style="-fx-background-color: #2ab867;" text="jobs" textFill="#f8f7f5">
+                  <Button fx:id="jobs" mnemonicParsing="false" onAction="#showJobs" prefHeight="32.0" prefWidth="137.0" styleClass="hover_border" stylesheets="@../Css/acceuil_user.css" text="jobs" textFill="#f8f7f5">
                      <font>
                         <Font size="18.0" />
                      </font>
