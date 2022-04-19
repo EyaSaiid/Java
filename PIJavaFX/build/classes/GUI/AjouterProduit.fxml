@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AjouterProduitController">
+   <children>
+      <Label layoutX="286.0" layoutY="64.0" text="Nom Produit" />
+      <TextField fx:id="Nom_Produit" layoutX="291.0" layoutY="88.0" prefHeight="31.0" prefWidth="462.0" />
+      <TextArea fx:id="Desc_Produit" layoutX="291.0" layoutY="157.0" prefHeight="64.0" prefWidth="462.0" />
+      <TextField fx:id="Prix" layoutX="291.0" layoutY="258.0" prefHeight="31.0" prefWidth="462.0" />
+      <Label layoutX="290.0" layoutY="130.0" text="Description" />
+      <Label layoutX="301.0" layoutY="233.0" text="Prix" />
+      <Label layoutX="286.0" layoutY="356.0" text="Categorie" />
+      <Button fx:id="AjouterProduit" layoutX="468.0" layoutY="555.0" mnemonicParsing="false" onAction="#AjouterProduit" prefHeight="31.0" prefWidth="107.0" text="Ajouter" />
+      <ChoiceBox fx:id="Categorie" layoutX="286.0" layoutY="380.0" prefHeight="31.0" prefWidth="469.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1fc2" height="618.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+      <Label layoutX="230.0" layoutY="14.0" prefHeight="50.0" prefWidth="367.0" text="Ajouter Produit">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_retour" layoutX="41.0" layoutY="555.0" mnemonicParsing="false" onAction="#RetourMenuProduit" prefHeight="31.0" prefWidth="117.0" text="Retour" />
+      <Label layoutX="288.0" layoutY="301.0" text="Quantite" />
+      <TextField fx:id="qte" layoutX="289.0" layoutY="318.0" prefHeight="31.0" prefWidth="462.0" />
+      <Label layoutX="287.0" layoutY="422.0" prefHeight="17.0" prefWidth="47.0" text="image" />
+      <Button fx:id="importerBtn" layoutX="325.0" layoutY="450.0" mnemonicParsing="false" onAction="#importer_image" text="Ajouter" />
+      <ImageView fx:id="image" fitHeight="95.0" fitWidth="117.0" layoutX="588.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
