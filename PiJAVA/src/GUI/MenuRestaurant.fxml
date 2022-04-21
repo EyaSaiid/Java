@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuRestaurantController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffca1f" height="559.0" stroke="BLACK" strokeType="INSIDE" width="189.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eff7d0a4" height="200.0" layoutX="238.0" layoutY="199.0" stroke="#0000005b" strokeType="INSIDE" width="607.0" />
+      <Button layoutX="270.0" layoutY="284.0" mnemonicParsing="false" onAction="#Afficher" prefHeight="31.0" prefWidth="150.0" text="Afficher" />
+      <Button layoutX="452.0" layoutY="284.0" mnemonicParsing="false" onAction="#AjouterRestaurant" text="Ajouter un Restaurant" />
+      <Button layoutX="646.0" layoutY="284.0" mnemonicParsing="false" onAction="#AjouterMenu" prefHeight="31.0" prefWidth="150.0" text="Ajouter Un Menu" />
+      <Label layoutX="238.0" layoutY="93.0" prefHeight="53.0" prefWidth="365.0" text="Menu Restaurant">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_Menu" layoutX="62.0" layoutY="505.0" mnemonicParsing="false" onAction="#goMenuBack" text="Menu" />
+   </children>
+</AnchorPane>

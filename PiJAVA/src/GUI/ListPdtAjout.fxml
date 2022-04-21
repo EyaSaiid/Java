@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListPdtAjoutController">
+   <children>
+      <TableView fx:id="Table_ProduitPlat" layoutX="161.0" layoutY="230.0" prefHeight="332.0" prefWidth="819.0">
+         <columns>
+            <TableColumn fx:id="Col_idPdtPlat" prefWidth="149.0" text="id_produitplat" />
+            <TableColumn fx:id="Col_NomPdtPlat" prefWidth="161.0" text="nom_produitplat" />
+            <TableColumn fx:id="Col_DescPdtPlat" prefWidth="178.0" text="desc_produitplat" />
+            <TableColumn fx:id="Col_Prix" prefWidth="97.0" text="Prix" />
+            <TableColumn fx:id="Col_idCategorie" minWidth="0.0" prefWidth="161.0" text="id_categorie" />
+            <TableColumn fx:id="Col_Selected" prefWidth="73.0" text="Select" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_Ajouter" layoutX="903.0" layoutY="577.0" mnemonicParsing="false" onAction="#Ajouter" text="Ajouter" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffcc23" height="622.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="118.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="106.0" layoutX="161.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="819.0" />
+      <Label layoutX="183.0" layoutY="119.0" text="Restaurant" />
+      <ComboBox fx:id="Restaurants" layoutX="302.0" layoutY="140.0" prefHeight="31.0" prefWidth="282.0" />
+      <Label layoutX="161.0" layoutY="29.0" text="Ajouter des Plats et Des boissons à un Restaurant">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_Retour" layoutX="27.0" layoutY="555.0" mnemonicParsing="false" onAction="#RetourMenuRestaurant" text="Retour" />
+   </children>
+</AnchorPane>

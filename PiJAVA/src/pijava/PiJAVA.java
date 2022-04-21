@@ -5,6 +5,9 @@
  */
 package pijava;
 
+import Entities.Categorie;
+import Entities.ProduitPlat;
+import Entities.Restaurant;
 import Entities.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,11 +21,14 @@ import javafx.stage.Stage;
  */
 public class PiJAVA extends Application {
     public static User user;
+     public static Restaurant resshow ;  
+     public static Categorie resshow2 ; 
+     public static ProduitPlat resshow3 ; 
     
     @Override
     public void start(Stage stage) throws Exception {
         
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/Afficher_Restaurants.fxml"));
         
         Scene scene = new Scene(root);
         

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StatCatProduitPlatController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="523.0" layoutX="78.0" layoutY="183.0" stroke="BLACK" strokeType="INSIDE" width="784.0" />
+      <PieChart fx:id="categChart" layoutX="184.0" layoutY="208.0" prefHeight="484.0" prefWidth="571.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="76.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="364.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="457.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="397.0" />
+      <Label layoutX="104.0" layoutY="108.0" prefHeight="36.0" prefWidth="175.0" text="Nombre de catégorie:" />
+      <Label layoutX="496.0" layoutY="119.0" text="Nombre de produit:" />
+      <Label fx:id="l_Tcategorie" layoutX="299.0" layoutY="119.0" text="Label" />
+      <Label fx:id="l_TProduit" layoutX="662.0" layoutY="119.0" text="Label" />
+   </children>
+</AnchorPane>

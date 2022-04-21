@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuProduitPlatController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb81fb9" height="469.0" stroke="BLACK" strokeType="INSIDE" width="155.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4ffd8" height="165.0" layoutX="188.0" layoutY="139.0" stroke="#00000040" strokeLineCap="ROUND" strokeType="INSIDE" width="519.0" />
+      <Label layoutX="188.0" layoutY="66.0" text="Menu Produit Plat">
+         <font>
+            <Font name="Franklin Gothic Medium" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_Ajouter" layoutX="256.0" layoutY="208.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="46.0" prefWidth="116.0" text="Ajouter" />
+      <Button fx:id="btn_Afficher" layoutX="543.0" layoutY="215.0" mnemonicParsing="false" onAction="#Afficher" prefHeight="40.0" prefWidth="100.0" text="Afficher" />
+      <Button fx:id="btn_Menu" layoutX="45.0" layoutY="408.0" mnemonicParsing="false" onAction="#goMenuBack" text="Menu" />
+   </children>
+</AnchorPane>
