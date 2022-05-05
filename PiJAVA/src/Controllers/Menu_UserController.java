@@ -449,6 +449,16 @@ TrayNotification tray = new TrayNotification("Avec succès", "Compte User  a ét
     }
 
     @FXML
-    private void Menu_jobs(ActionEvent event) {
+    private void Menu_jobs(ActionEvent event) throws IOException {
+        Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/Menu_jobs.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show();   
+        
+    
     }
 }

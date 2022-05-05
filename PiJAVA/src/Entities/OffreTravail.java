@@ -15,6 +15,7 @@ public class OffreTravail {
     private int id;
     private String titre;
     private String description;
+    private String restaurant;
 
     public OffreTravail() {
         this.user_id=user_id;
@@ -36,9 +37,10 @@ public class OffreTravail {
     }
 
     
-    public OffreTravail(String titre, String description) {
+    public OffreTravail(String titre, String description, int id_restaurant) {
         this.titre = titre;
         this.description = description;
+        this.id_restaurant=id_restaurant;
     }
     public int getId_restaurant() {
             return id_restaurant;
@@ -76,6 +78,14 @@ public class OffreTravail {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(String restaurant) {
+        this.restaurant = restaurant;
     }
 
     @Override

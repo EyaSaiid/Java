@@ -34,14 +34,14 @@ public class OffreTravailService implements IServiceOffreTravail<OffreTravail> {
     
     
     @Override
-    public void add(OffreTravail t) throws SQLException {
+    public void add(OffreTravail t, int iduser) throws SQLException {
         //INSERT INTO `offre_travail`(`id`, `user_id`, `id_restaurant`, `titre`, `description`) 
         //VALUES 
         //([value-1],[value-2],[value-3],[value-4],[value-5])
         String req = "INSERT INTO `offre_travail` (`id`,`user_id`,`id_restaurant`,`titre`,`description`) VALUES (?,?,?,?,?)";
         PreparedStatement pstm = con.prepareStatement(req);
         pstm.setInt(1, t.getId());
-        pstm.setInt(2, t.getUser_id());        
+        pstm.setInt(2, iduser);        
         pstm.setInt(3, t.getId_restaurant());
         pstm.setString(4, t.getTitre());
         pstm.setString(5, t.getDescription());
@@ -55,33 +55,64 @@ public class OffreTravailService implements IServiceOffreTravail<OffreTravail> {
 
     //Works!!
     @Override
-    public List<OffreTravail> show() throws SQLException {
+    public List<OffreTravail> show()  {
+        List<OffreTravail> offreTravails = new ArrayList<OffreTravail>();
+        try{
+        
         String req = "Select * from `offre_travail`";
         stm = con.createStatement();
         ResultSet rst = stm.executeQuery(req);
         System.out.println(rst.toString());
-        List<OffreTravail> offreTravails = new ArrayList<OffreTravail>();
         while(rst.next()){
             
             OffreTravail p = new OffreTravail(rst.getInt("id"),rst.getInt("user_id"),rst.getInt("id_restaurant"),rst.getString("titre"),rst.getString("description"));
             offreTravails.add(p);
         }
-        return offreTravails;   }
+        }catch(SQLException ex){
+            System.err.println(ex.getMessage());
+        }
+        return offreTravails;   
+    }
+    
+    public List<String> showRestaurantList(){
+        
+        //List<OffreTravail> offreTravails = new ArrayList<OffreTravail>();
+        try{
+        String req = "Select nom_restaurant from restaurant where user_id = ";
+        stm = con.createStatement();
+        ResultSet rst = stm.executeQuery(req);
+        System.out.println(rst.toString());
+        while(rst.next()){
+            
+          
+        }
+        }catch(SQLException ex){
+            System.err.println(ex.getMessage());
+        }
+        return null;
+    }
     
 
     //Works!!
     @Override
-    public void update(OffreTravail t, int id) throws SQLException {
+    public void update(OffreTravail t, int id,int idres) throws SQLException {
+                           System.out.println("Offre de travail modifiée !");
+
         try {
-                   String requete = "UPDATE offre_travail SET titre=? WHERE id=?"+id;
+                   String requete = "UPDATE offre_travail SET `id_restaurant`=?, titre=?, `description`=? WHERE id="+id;
                    PreparedStatement pst = con.prepareStatement(requete);
-                   pst.setString(1, t.getTitre());
-                   pst.setInt(2,t.getId());
+                   pst.setInt(1, idres);
+                   pst.setString(2,t.getTitre());
+                   pst.setString(3,t.getDescription());
+                   
+
                    //pst.setString(2,t.getDateDebut().toString());
                   // pst.setString(3,t.getDateFin().toString());
 
 
                   pst.executeUpdate();
+                  
+                  System.out.println(pst);
                    System.out.println("Offre de travail modifiée !");
 
                } catch (SQLException ex) {
@@ -100,24 +131,27 @@ public class OffreTravailService implements IServiceOffreTravail<OffreTravail> {
 
     //Works!!
     @Override
-    public OffreTravail showByID(int id) throws SQLException {
-        String req="select * from `offre_travail` where id="+id;
-             OffreTravail a=new OffreTravail();
-              stm = con.createStatement();
-
+    public OffreTravail showByID(int id)   {
+        OffreTravail a=new OffreTravail();
             try {
 
-                    ResultSet rst=stm.executeQuery(req);
+                String req="select * from `offre_travail` where id="+id;
+                PreparedStatement pst = con.prepareStatement(req);
+                ResultSet rst = pst.executeQuery();
+
+               
                     rst.next();
                     a.setId(rst.getInt("id"));
                    
                     a.setTitre(rst.getString("titre"));
                     a.setDescription(rst.getString("description"));
 
+               
+                
             } catch (SQLException ex) {
-                Logger.getLogger(OffreTravailService.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println(ex.getMessage());
             }
-        return a;    
+                return a;
     }
 
  

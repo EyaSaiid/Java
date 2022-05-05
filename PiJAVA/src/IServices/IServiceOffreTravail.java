@@ -14,10 +14,10 @@ import java.util.List;
  */
 public interface IServiceOffreTravail<T> {
     
-    void add(T t) throws SQLException;
+    void add(T t, int iduser) throws SQLException;
     void ajouterr(T t)throws SQLException; //2eme methode
     List<T> show() throws SQLException;
-     void update(T t, int id) throws SQLException;
+     void update(T t, int id, int idres) throws SQLException;
     void deleteById(int t)throws SQLException;
     T showByID(int t)throws SQLException;
     

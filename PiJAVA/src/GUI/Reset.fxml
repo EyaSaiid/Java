@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="359.0" prefWidth="416.0" style="-fx-background-color: FFFACD;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ResetController">
+    <stylesheets>
+        <URL value="@/Css/reset.css"/>
+    </stylesheets>
+     <children>
+      <TextField fx:id="tfnewpass" layoutX="84.0" layoutY="133.0" prefHeight="25.0" prefWidth="259.0" promptText="Mot de passe" styleClass="tf_box" stylesheets="@../css/reset.css" />
+      <TextField fx:id="tfnewpass1" layoutX="84.0" layoutY="196.0" prefHeight="25.0" prefWidth="259.0" promptText="Mot de passe" styleClass="tf_box" stylesheets="@../css/reset.css" />
+      <Button fx:id="btnreset" layoutX="153.0" layoutY="262.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="93.0" styleClass="btn" stylesheets="@../css/reset.css" text="Valider" />
+      <Text fill="#141414" layoutX="56.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saisissez votre nouveau mot de passe" wrappingWidth="322.9912109375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="391.0" layoutY="2.0" onMouseClicked="#closeApplication" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

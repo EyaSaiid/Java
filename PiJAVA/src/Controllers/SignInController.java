@@ -204,7 +204,7 @@ public class SignInController implements Initializable {
 
             tfmdp.setPromptText(tfmdp.getText());
             tfmdp.setText("");
-            tfmdp.setDisable(true);
+            tfmdp.setDisable(true); // show password
         } else {
 
             tfmdp.setText(tfmdp.getPromptText());
@@ -214,9 +214,14 @@ public class SignInController implements Initializable {
     }
 
     @FXML
-    private void Forgot_Password(MouseEvent event) {
+    private void Forgot_Password(MouseEvent event) throws IOException {
+                
+        Stage home = new Stage();
+        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/sendCode.fxml"));
+                        Scene sc = new Scene(fxml);
+                        home.setScene(sc);
+                        home.show();
     }
-
 
     @FXML
     private void Inscription(MouseEvent event) throws IOException {
