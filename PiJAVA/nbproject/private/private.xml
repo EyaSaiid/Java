@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/SignInController.java</file>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/SignUpController.java</file>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/SendCodeController.java</file>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Utils/JavaMailUtil.java</file>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Utils/JavaMailResetUtil.java</file>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/ResetController.java</file>
             <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Services/UserService.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Services/OffreTravailService.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/Menu_UserController.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/GUI/Acceuil_user.fxml</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/Add_jobsController.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Css/acceuil_jobs.css</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Entities/OffreTravail.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/GUI/acceuil_jobs.fxml</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/Acceuil_jobsController.java</file>
+            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/ProfileUserController.java</file>
         </group>
     </open-files>
 </project-private>

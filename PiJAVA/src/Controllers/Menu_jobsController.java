@@ -234,6 +234,7 @@ public class Menu_jobsController implements Initializable {
                 TrayNotification tray = new TrayNotification("Avec succès", "Offre de travail  a été modifiée avec succés !", SUCCESS);
                 tray.setAnimationType(AnimationType.POPUP);
                 tray.showAndDismiss(Duration.seconds(4));
+                
         } catch (SQLException ex) {
             Logger.getLogger(Menu_jobsController.class.getName()).log(Level.SEVERE, null, ex);
         }

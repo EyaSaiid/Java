@@ -254,4 +254,22 @@ public class UserService implements IserviceUser<User> {
         return valide;
     }
 
+    public void updatePassword(String reset_mail, String password) {
+ 
+    try {
+            String requete = "UPDATE  user SET password=?"
+                    + " WHERE email=?";
+            Statement st = cnx.createStatement();
+            PreparedStatement ps = cnx.prepareStatement(requete);
+            ps.setString(1,encryptThisString(password));
+            ps.setString(2, reset_mail);
+            
+            ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+    
+    }
+
 }

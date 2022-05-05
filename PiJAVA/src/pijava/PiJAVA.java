@@ -5,6 +5,7 @@
  */
 package pijava;
 
+import Entities.OffreTravail;
 import Entities.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +19,9 @@ import javafx.stage.Stage;
  */
 public class PiJAVA extends Application {
     public static User user;
-    
+    public static OffreTravail offreshow ;  
+    public static String reset_mail;
+
     @Override
     public void start(Stage stage) throws Exception {
         
