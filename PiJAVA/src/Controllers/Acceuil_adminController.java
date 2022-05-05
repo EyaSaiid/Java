@@ -98,7 +98,12 @@ public class Acceuil_adminController implements Initializable {
     }
     
     @FXML
-    private void Menu_Rest(ActionEvent event) {
+    private void Menu_Rest(ActionEvent event) throws IOException {
+        Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/Menu_BackRestaurant.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+        window.setScene(gestionViewScene);
+        window.show();   
     }
 
     @FXML

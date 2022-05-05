@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="831.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AfficherRestaurantController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb51fc9" height="831.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <TableView fx:id="TableRestaurant" layoutX="179.0" layoutY="390.0" prefHeight="425.0" prefWidth="1053.0">
+        <columns>
+          <TableColumn fx:id="Col_IdRes" prefWidth="51.0" text="Id" />
+          <TableColumn fx:id="Col_NomRes" prefWidth="149.0" text="NomRestaurant" />
+            <TableColumn fx:id="Col_Desc" prefWidth="119.0" text="Description" />
+            <TableColumn fx:id="Col_Capacite" prefWidth="71.0" text="capacité" />
+            <TableColumn fx:id="Col_Numero" prefWidth="102.0" text="Numero" />
+            <TableColumn fx:id="Col_Specialite" prefWidth="111.0" text="Specialite" />
+            <TableColumn fx:id="Col_Adresse" prefWidth="117.0" text="adresse" />
+            <TableColumn fx:id="Co_idUser" prefWidth="105.0" text="Proprio" />
+            <TableColumn fx:id="Col_Delete" prefWidth="106.0" text="delete" />
+            <TableColumn fx:id="Col_Update" prefWidth="121.0" text="Modifier" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="307.0" layoutX="179.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="1053.0" />
+      <Label layoutX="191.0" layoutY="14.0" prefHeight="49.0" prefWidth="356.0" text="Ajouter Restaurant">
+         <font>
+            <Font name="Britannic Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="86.0" text="Nom Restaurant" />
+      <Label layoutX="193.0" layoutY="171.0" text="Description" />
+      <Label layoutX="191.0" layoutY="292.0" text="Numero" />
+      <Label layoutX="737.0" layoutY="96.0" text="Adresse" />
+      <Label layoutX="736.0" layoutY="171.0" text="capacite" />
+      <Label layoutX="726.0" layoutY="258.0" text="Specialite" />
+      <TextField fx:id="NomRes" layoutX="240.0" layoutY="116.0" prefHeight="34.0" prefWidth="318.0" />
+      <TextField fx:id="Numero" layoutX="240.0" layoutY="318.0" prefHeight="34.0" prefWidth="318.0" />
+      <TextArea fx:id="Desc" layoutX="240.0" layoutY="200.0" prefHeight="79.0" prefWidth="318.0" />
+      <TextField fx:id="Adresse" layoutX="808.0" layoutY="118.0" prefHeight="31.0" prefWidth="306.0" />
+      <TextField fx:id="Capacite" layoutX="806.0" layoutY="200.0" prefHeight="31.0" prefWidth="306.0" />
+      <ComboBox fx:id="Specialite" layoutX="808.0" layoutY="287.0" prefHeight="31.0" prefWidth="250.0" />
+      <Button fx:id="btn_Modifier" layoutX="640.0" layoutY="329.0" mnemonicParsing="false" onAction="#UpdateRestaurant" text="Modifier" />
+      <Button layoutX="52.0" layoutY="784.0" mnemonicParsing="false" onAction="#RetourMenuRestaurant" text="Retour" />
+   </children>
+</AnchorPane>

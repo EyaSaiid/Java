@@ -33,18 +33,23 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
     }
 
     @Override
-    public void add(Restaurant t) throws SQLException {
+    public void add(Restaurant t)  {
+        try{
         String req ="INSERT INTO `restaurant`(`nom_restaurant`, `desc_restaurant`, `capacite`, `num_tel`, `adresse`, `specialite`, `user_id`) VALUES"
                 + " ('"+t.getNom_restaurant()+"','"+ t.getDesc_restaurant()+"','"
                 + t.getCapacité()+"','"+t.getNum_tel()+"','"+ t.getAdresse()+"','"+ t.getSpecialité()+"','"+ t.getId_user()+"') ";
         
         stm = con.createStatement();
+        stm.executeUpdate(req);
         //int n =stm.executeUpdate(req);
-
+          } catch (SQLException ex) {
+                    System.err.println(ex.getMessage());
+                }
     }
     
-      public void add2(Restaurant t, ArrayList<Integer> l) throws SQLException {
+      public void add2(Restaurant t, ArrayList<Integer> l) {
         int cu=0;
+        try{
         String req ="INSERT INTO `restaurant`(`nom_restaurant`, `desc_restaurant`, `capacite`, `num_tel`, `adresse`, `specialite`, `user_id`) VALUES"
                 + " ('"+t.getNom_restaurant()+"','"+ t.getDesc_restaurant()+"','"
                 + t.getCapacité()+"','"+t.getNum_tel()+"','"+ t.getAdresse()+"','"+ t.getSpecialité()+"','"+ t.getId_user()+"')";
@@ -62,17 +67,41 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
        String req2="INSERT INTO `resto_produitplat`(`id_produitplat`, `id_restaurant`) VALUES ('"+pdt+"','"+cu+"') ";
     stm.executeUpdate(req2);
                }
+        } catch (SQLException ex) {
+                    System.err.println(ex.getMessage());
+                }
 
     }
-    
+    public void add3(int id, ArrayList<Integer> l) {
+       
+        try{ 
+            stm = con.createStatement();
+             int x=0;
+       int length=l.size();
+       for(int i=0;i<=length;i++){
+        x= l.get(i);
+        System.out.println(x);
+       String req2="INSERT INTO `resto_produitplat`(`id_produitplat`, `id_restaurant`) VALUES ('"+x+"','"+id+"');";
+       stm.executeUpdate(req2);
+       }
+               
+        } catch (SQLException ex) {
+                    System.err.println(ex.getMessage());
+                }
+
+    }
 
         
     @Override
-    public void deleteById(int t) throws SQLException {
+    public void deleteById(int t)  {
+        try{
         String req = "DELETE FROM `restaurant` WHERE id_restaurant="
                 + t;
         stm = con.createStatement();
         stm.executeUpdate(req);
+         } catch (SQLException ex) {
+                    System.err.println(ex.getMessage());
+                }
 
     }
         @Override
@@ -84,7 +113,6 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
                     PreparedStatement pst = con.prepareStatement(requete);
                     pst.setInt(1, t.getId_restaurant());
                      int row= pst.executeUpdate();
-                    
         if(row>0)
                     System.out.println("formation supprimée !");
 
@@ -95,10 +123,10 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
             
             
     @Override
-   public List<Restaurant> show()  {
+    public List<Restaurant> show()  {
          List<Restaurant> restaurants = new ArrayList<Restaurant>();
         try{ 
-            String req = "Select * from restaurant";
+            String req = "Select * from `restaurant`";
         stm = con.createStatement();
         ResultSet rst = stm.executeQuery(req);
         System.out.println(rst.toString());
@@ -118,11 +146,12 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
     
     
     @Override
-     public Restaurant showByID(int id)throws SQLException{
+     public Restaurant showByID(int id){
          String req="select * from `restaurant` where id_restaurant="+id;
          Restaurant  a=new Restaurant ();
+         try{
           stm = con.createStatement();
-        try { 
+      
             ResultSet rst=stm.executeQuery(req);
                 rst.next();
                 a.setNom_restaurant(rst.getString("nom_restaurant"));
@@ -144,7 +173,7 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      @Override
-    public void update(Restaurant t , int id)throws SQLException {
+    public void update(Restaurant t , int id){
         try {
             stm = con.createStatement();
             String requete = "UPDATE restaurant SET nom_restaurant=? ,  desc_restaurant=?, capacite=? "
@@ -166,7 +195,7 @@ public class RestaurantService implements IRestaurantService<Restaurant>  {
         }
     }
     //rechercher restaurant
-      public List<Restaurant> rechercher2(String s)throws SQLException {
+      public List<Restaurant> rechercher2(String s){
         try{
              String requete="select * from restaurant where nom_restaurant LIKE ?  ";
             PreparedStatement pst=con.prepareStatement(requete);

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjouterProduitPlatController">
+   <children>
+      <Label layoutX="291.0" layoutY="106.0" text="Nom Produit/Plat" />
+      <TextField fx:id="Nom_ProduitPlat" layoutX="291.0" layoutY="137.0" prefHeight="31.0" prefWidth="462.0" />
+      <TextArea fx:id="Desc_ProduitPlat" layoutX="291.0" layoutY="222.0" prefHeight="141.0" prefWidth="462.0" />
+      <TextField fx:id="Prix" layoutX="291.0" layoutY="415.0" prefHeight="31.0" prefWidth="462.0" />
+      <Label layoutX="291.0" layoutY="181.0" text="Description" />
+      <Label layoutX="291.0" layoutY="376.0" text="Prix" />
+      <Label layoutX="291.0" layoutY="462.0" text="Categorie" />
+      <Button fx:id="AjouterProduitPlat" layoutX="468.0" layoutY="555.0" mnemonicParsing="false" onAction="#AjouterProduitPlat" prefHeight="31.0" prefWidth="107.0" text="Ajouter" />
+      <ChoiceBox fx:id="Categorie" layoutX="291.0" layoutY="497.0" prefHeight="31.0" prefWidth="462.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1fc2" height="618.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+      <Label layoutX="256.0" layoutY="42.0" prefHeight="50.0" prefWidth="367.0" text="Ajouter Produit Plat">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_retour" layoutX="41.0" layoutY="555.0" mnemonicParsing="false" onAction="#RetourMenuProduitPlat" prefHeight="31.0" prefWidth="117.0" text="Retour" />
+   </children>
+</AnchorPane>

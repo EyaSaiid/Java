@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AfficherCategorieController">
+   <children>
+      <TableView fx:id="Table_Categorie" layoutX="173.0" layoutY="217.0" prefHeight="311.0" prefWidth="760.0">
+        <columns>
+          <TableColumn fx:id="Col_idCategorie" prefWidth="111.0" text="id" />
+          <TableColumn fx:id="Col_NomCategorie" prefWidth="186.0" text="nom_categorie" />
+            <TableColumn fx:id="Col_Update" minWidth="0.0" prefWidth="181.0" text="update" />
+            <TableColumn fx:id="Col_delete" minWidth="0.0" prefWidth="179.0" text="delete" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad1fbc" height="644.0" layoutY="-15.0" stroke="BLACK" strokeType="INSIDE" width="129.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="121.0" layoutX="157.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" width="783.0" />
+      <Label fx:id="l_NomCategorie" layoutX="226.0" layoutY="120.0" text="Nom de la catégorie" />
+      <TextField fx:id="NomCategorie" layoutX="404.0" layoutY="149.0" prefHeight="31.0" prefWidth="258.0" />
+      <Button fx:id="btn_update" layoutX="790.0" layoutY="149.0" mnemonicParsing="false" onAction="#UpdateCategorie" text="Modifier" />
+      <Button fx:id="btn_Retour" layoutX="32.0" layoutY="575.0" mnemonicParsing="false" onAction="#RetourMenuCategorie" text="Retour" />
+      <Label layoutX="164.0" layoutY="26.0" text="Categorie">
+         <font>
+            <Font name="Arial" size="47.0" />
+         </font>
+      </Label>
+      <Pagination fx:id="pagination" layoutX="168.0" layoutY="283.0" prefHeight="311.0" prefWidth="767.0" />
+   </children>
+</AnchorPane>

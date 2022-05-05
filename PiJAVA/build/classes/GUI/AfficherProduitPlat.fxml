@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="1089.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AfficherProduitPlatController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffae1f" height="739.0" stroke="BLACK" strokeType="INSIDE" width="141.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="164.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="896.0" />
+      <TableView fx:id="Table_ProduitPlat" layoutX="164.0" layoutY="370.0" prefHeight="332.0" prefWidth="896.0">
+        <columns>
+          <TableColumn fx:id="Col_idPdtPlat" prefWidth="149.0" text="id_produitplat" />
+          <TableColumn fx:id="Col_NomPdtPlat" prefWidth="120.0" text="nom_produitplat" />
+            <TableColumn fx:id="Col_DescPdtPlat" prefWidth="165.0" text="desc_produitplat" />
+            <TableColumn fx:id="Col_Prix" prefWidth="79.0" text="Prix" />
+            <TableColumn fx:id="Col_idCategorie" minWidth="0.0" prefWidth="99.0" text="id_categorie" />
+            <TableColumn fx:id="Col_Delete" prefWidth="143.0" text="Supprimer" />
+            <TableColumn fx:id="Col_Update" prefWidth="138.0" text="Modifier" />
+        </columns>
+      </TableView>
+      <Label layoutX="189.0" layoutY="111.0" text="Nom ProduitPlat" />
+      <Label layoutX="200.0" layoutY="201.0" text="Description" />
+      <Label layoutX="621.0" layoutY="212.0" text="Catégorie" />
+      <Label layoutX="628.0" layoutY="111.0" text="Prix" />
+      <TextField fx:id="NomPdtPlat" layoutX="310.0" layoutY="141.0" prefHeight="31.0" prefWidth="187.0" />
+      <TextArea fx:id="Desc" layoutX="310.0" layoutY="211.0" prefHeight="117.0" prefWidth="187.0" />
+      <TextField fx:id="Prix" layoutX="732.0" layoutY="141.0" prefHeight="31.0" prefWidth="247.0" />
+      <ComboBox fx:id="Categorie" layoutX="732.0" layoutY="230.0" prefHeight="31.0" prefWidth="247.0" />
+      <Button layoutX="536.0" layoutY="328.0" mnemonicParsing="false" onAction="#UpdateProduitPlat" text="Modifier" />
+      <Label graphicTextGap="10.0" layoutX="175.0" layoutY="21.0" text="ProduitPlat">
+         <font>
+            <Font name="Calibri" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_Retour" layoutX="32.0" layoutY="680.0" mnemonicParsing="false" onAction="#RetourMenuProduitPlat" prefHeight="31.0" prefWidth="77.0" text="Retour" />
+      <Pagination fx:id="pagination" layoutX="164.0" layoutY="413.0" prefHeight="332.0" prefWidth="896.0" />
+      <Button layoutX="912.0" layoutY="36.0" mnemonicParsing="false" onAction="#exportExcel" prefHeight="31.0" prefWidth="47.0" />
+      <ImageView fitHeight="31.0" fitWidth="24.0" layoutX="924.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/excel.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_stat" layoutX="824.0" layoutY="37.0" mnemonicParsing="false" onAction="#GoStat" prefHeight="31.0" prefWidth="47.0" />
+      <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="835.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/statistiques%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
