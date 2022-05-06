@@ -57,5 +57,10 @@
             <Image url="@../Images/statistiques%20(1).png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="157.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/DMA9_2.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

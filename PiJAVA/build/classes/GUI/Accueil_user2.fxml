@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" prefHeight="669.0" prefWidth="876.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Accueil_user2Controller">
+    <children>
+
+      <AnchorPane id="AnchorPane" fx:id="anchorRoot" prefHeight="669.0" prefWidth="1114.0" style="-fx-background-color: none;">
+    <stylesheets>
+        <URL value="@acceuil_user.css" />
+    </stylesheets>
+    <children>
+            <HBox layoutY="6.0" prefHeight="78.0" prefWidth="1144.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox fx:id="goacc" alignment="CENTER" maxWidth="-Infinity" onMousePressed="#goacc" prefHeight="83.0" prefWidth="158.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/DMA9%202.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: green;" text="Dma9">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="83.0" prefWidth="958.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox fx:id="rest1" alignment="CENTER_LEFT" styleClass="hover_border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Button fx:id="rest" mnemonicParsing="false" onAction="#gorestaurant" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Restaurant" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="hover_border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="btnreservation" mnemonicParsing="false" onAction="#goreservation" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Reservation" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="jobs1" alignment="CENTER_LEFT" styleClass="hover_border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="jobs" mnemonicParsing="false" onAction="#showJobs" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Travail" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="prod1" alignment="CENTER_LEFT" styleClass="hover_border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Button fx:id="prod" mnemonicParsing="false" onAction="#ShowBoutique" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Boutique" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="event1" alignment="CENTER_LEFT" styleClass="hover_border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Button fx:id="event" mnemonicParsing="false" onAction="#ShowEvent" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Evenement" />
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="photo" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="nom_prenom" onMouseClicked="#goProfile" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Foulen Ben Foulen">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button fx:id="Logout" mnemonicParsing="false" onAction="#logout">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/icons8-logout-58.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="255.0" fitWidth="612.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/food1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="255.0" fitWidth="569.0" layoutX="366.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/food1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="255.0" fitWidth="569.0" layoutX="601.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/food1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="169.0" fitWidth="422.0" layoutX="349.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/DMA9_logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="211.0" fitWidth="542.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/food1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="211.0" fitWidth="542.0" layoutX="449.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/food1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="211.0" fitWidth="542.0" layoutX="684.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/food1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+</AnchorPane>
+</children>
+</StackPane>

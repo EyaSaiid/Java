@@ -7,6 +7,8 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -48,5 +50,10 @@
       <ComboBox fx:id="Specialite" layoutX="808.0" layoutY="287.0" prefHeight="31.0" prefWidth="250.0" />
       <Button fx:id="btn_Modifier" layoutX="640.0" layoutY="329.0" mnemonicParsing="false" onAction="#UpdateRestaurant" text="Modifier" />
       <Button layoutX="52.0" layoutY="784.0" mnemonicParsing="false" onAction="#RetourMenuRestaurant" text="Retour" />
+      <ImageView fitHeight="154.0" fitWidth="168.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/DMA9_2.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -21,16 +21,21 @@ import javafx.scene.image.ImageView;
 import pijava.PiJAVA;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -40,7 +45,6 @@ import javafx.stage.Stage;
  * @author dell
  */
 public class Front_RestaurantDetailController implements Initializable {
-    
     @FXML
     private Label Desc;
 
@@ -52,11 +56,6 @@ public class Front_RestaurantDetailController implements Initializable {
 
     @FXML
     private Label Specialite;
-     @FXML
-    private Button btnrestaurant;
-     @FXML
-    private Button btnreservation;
-
 
     @FXML
     private Label Numero;
@@ -67,6 +66,46 @@ public class Front_RestaurantDetailController implements Initializable {
     @FXML
     private GridPane grid;
 
+    @FXML
+    private HBox goacc;
+
+    @FXML
+    private HBox rest1;
+
+    @FXML
+    private Button rest;
+
+    @FXML
+    private Button btnreservation;
+
+    @FXML
+    private HBox jobs1;
+
+    @FXML
+    private Button jobs;
+
+    @FXML
+    private HBox prod1;
+
+    @FXML
+    private Button prod;
+
+    @FXML
+    private HBox event1;
+
+    @FXML
+    private Button event;
+
+    @FXML
+    private ImageView photo;
+
+    @FXML
+    private Text nom_prenom;
+
+    @FXML
+    private Button Logout;
+   
+
     private MyListener myListener;
    
     Scene fxmlFile;
@@ -75,33 +114,96 @@ public class Front_RestaurantDetailController implements Initializable {
      @FXML
     private Button btn_show;
      
-     
       @FXML
-    void goacc(ActionEvent event)  {
+    void ShowBoutique(ActionEvent event) {
 
     }
-     @FXML
-    void gorestaurant(ActionEvent event) throws IOException {
- Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/Front_Restaurants.fxml"));
-     Scene gestionViewScene = new Scene(gestionView);
-     
-     //les informations du stage
-     Stage window = (Stage)(((Node)event.getSource()).getScene().getWindow());
-     
-     window.setScene(gestionViewScene);
-     window.show();
+
+    @FXML
+    void ShowEvent(ActionEvent event) {
+
     }
-        @FXML
+
+    @FXML
+    void goProfile(MouseEvent event)  throws IOException {
+         Stage home = new Stage();
+        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/ProfileUser.fxml"));
+                        Scene sc = new Scene(fxml);
+                        home.setScene(sc);
+                        home.show();
+
+    }
+
+    @FXML
+    void goacc(MouseEvent event) {
+
+    }
+
+    
+    @FXML
     void goreservation(ActionEvent event) throws IOException {
- Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/AjouterReservation.fxml"));
-     Scene gestionViewScene = new Scene(gestionView);
-     
-     //les informations du stage
-     Stage window = (Stage)(((Node)event.getSource()).getScene().getWindow());
-     
-     window.setScene(gestionViewScene);
-     window.show();
+        
+          Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/AjouterReservation.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+
     }
+
+    @FXML
+    void gorestaurant(ActionEvent event) throws IOException {
+         Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/Front_Restaurants.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+
+    }
+
+    @FXML
+    void logout(ActionEvent event) {
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Vous allez quitter l'application");
+        alert.setHeaderText("Vous allez quitter l'application");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            System.exit(0);
+        } else {
+            alert.close();
+        }
+
+    }
+
+     @FXML
+    private void showJobs(ActionEvent event) throws IOException {
+        Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/acceuil_jobs.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+        
+    }
+      @FXML
+    void goacc(ActionEvent event) throws IOException  {
+         Stage home = new Stage();
+        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/Accueil_user2.fxml"));
+                        Scene sc = new Scene(fxml);
+                        home.setScene(sc);
+                        home.show();
+
+    }
+     
+       
 
     @FXML
     void show(MouseEvent event) throws IOException {
@@ -119,6 +221,9 @@ public class Front_RestaurantDetailController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+          nom_prenom.setText(PiJAVA.user.getEmail());
+        Image im = new Image(this.getClass().getResourceAsStream("/Images/" + PiJAVA.user.getImage_user()));
+        photo.setImage(im);  
         // TODO
        NomRes.setText(PiJAVA.resshow.getNom_restaurant());
        Specialite.setText(PiJAVA.resshow.getSpecialité());
