@@ -93,7 +93,7 @@ public class SignInController implements Initializable {
                                       System.out.println("gggggggg");
                     Stage home = new Stage();
                     try {
-                        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/Acceuil_user.fxml"));
+                        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/Accueil_user2.fxml"));
                         Scene sc = new Scene(fxml);
                         home.setScene(sc);
                         home.show();

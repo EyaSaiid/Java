@@ -20,24 +20,24 @@
     -fx-background-color: #828282;
     -fx-background-radius: 30;
 }
-.shadow{
+/*.shadow{
     -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
-}
+}*/
 .chosen-entreprise-card{
     -fx-background-color: #F16C31;
     -fx-background-radius: 30;
 }
 
-.showmore-btn{
+/*.showmore-btn{
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 100;
-}
+}*/
 
-.selected{
+/*.selected{
         -fx-background-color:  #fabb55;
-}
+}*/
 
-.hover_border{
+/*.hover_border{
         -fx-background-color:  #2ab867;
 }
 .hover_border:hover{
@@ -45,7 +45,7 @@
     -fx-border-width: 0px 0px 0px 2px;
     -fx-background-color: #fabb55;
     -fx-cursor: hand;
-}
+}*/
 
 .cursor_hand{
     -fx-cursor: hand;

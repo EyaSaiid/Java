@@ -48,7 +48,7 @@ public class Offre_SingleController implements Initializable {
         this.offre = offre;
         this.myListener = myListener;
         singleOtitre.setText(offre.getTitre());
-        Image image = new Image(this.getClass().getResourceAsStream("/Images/restaurant.png"));
+        Image image = new Image(this.getClass().getResourceAsStream("/Images/jobs.png"));
         singleOimg.setImage(image);            
         
         

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="723.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Front_RestaurantDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="199.0" layoutX="42.0" layoutY="490.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="964.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="389.0" layoutX="49.0" layoutY="97.0" stroke="#00000091" strokeLineCap="ROUND" strokeType="INSIDE" width="262.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="383.0" layoutX="327.0" layoutY="99.0" stroke="BLACK" strokeType="INSIDE" width="672.0" />
+      <ScrollPane layoutX="344.0" layoutY="289.0" prefHeight="177.0" prefWidth="646.0">
+         <content>
+            <Label fx:id="Desc" prefHeight="181.0" prefWidth="642.0" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </content>
+      </ScrollPane>
+      <Label fx:id="NomRes" layoutX="549.0" layoutY="170.0" prefHeight="21.0" prefWidth="236.0" text="Label">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="242.0" text="Description">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="Img" fitHeight="190.0" fitWidth="213.0" layoutX="77.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="67.0" layoutY="391.0" text="Specialité">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="440.0" text="Numero">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="Specialite" layoutX="177.0" layoutY="391.0" prefHeight="21.0" prefWidth="110.0">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label fx:id="Numero" layoutX="171.0" layoutY="440.0" prefHeight="21.0" prefWidth="129.0">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="338.0" layoutY="116.0" text="Restaurant :">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scroll" layoutX="49.0" layoutY="535.0" prefHeight="129.0" prefWidth="950.0" styleClass="transparent">
+         <content>
+            <GridPane fx:id="grid" prefHeight="12.0" prefWidth="24.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="56.0" layoutY="506.0" prefHeight="21.0" prefWidth="390.0" text="Selectionnez la catégorie pour visualiser le menu:" />
+      <Button layoutX="507.0" layoutY="501.0" mnemonicParsing="false" onMousePressed="#show" text="Afficher" />
+      <HBox style="-fx-background-color: white;">
+         <children>
+            <HBox fx:id="goacc" alignment="CENTER" maxWidth="-Infinity" onMousePressed="#goacc" prefHeight="70.0" prefWidth="150.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/DMA9%202.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: green;" text="Dma9">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="83.0" prefWidth="958.0">
+               <children>
+                  <HBox fx:id="rest1" alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="rest" mnemonicParsing="false" onAction="#gorestaurant" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Restaurant" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <Button fx:id="btnreservation" mnemonicParsing="false" onAction="#goreservation" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Reservation" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="jobs1" alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <Button fx:id="jobs" mnemonicParsing="false" onAction="#showJobs" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Travail" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="prod1" alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="prod" mnemonicParsing="false" onAction="#ShowBoutique" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Boutique" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="event1" alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="event" mnemonicParsing="false" onAction="#ShowEvent" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-text-fill: #485460; -fx-background-color: none;" text="Evenement" />
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="photo" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="nom_prenom" onMouseClicked="#goProfile" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Foulen Ben Foulen">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button fx:id="Logout" mnemonicParsing="false" onAction="#logout">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-logout-58.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

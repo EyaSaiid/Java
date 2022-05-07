@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuRestaurantController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffca1f" height="559.0" stroke="BLACK" strokeType="INSIDE" width="189.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eff7d0a4" height="200.0" layoutX="238.0" layoutY="199.0" stroke="#0000005b" strokeType="INSIDE" width="607.0" />
+      <Button layoutX="279.0" layoutY="222.0" mnemonicParsing="false" onAction="#Afficher" prefHeight="50.0" prefWidth="181.0" text="Afficher" />
+      <Button layoutX="576.0" layoutY="222.0" mnemonicParsing="false" onAction="#AjouterRestaurant" prefHeight="50.0" prefWidth="189.0" text="Ajouter un Restaurant" />
+      <Button layoutX="442.0" layoutY="311.0" mnemonicParsing="false" onAction="#AjouterMenu" prefHeight="50.0" prefWidth="159.0" text="Ajouter Un Menu" />
+      <Label layoutX="334.0" layoutY="104.0" prefHeight="53.0" prefWidth="365.0" text="Menu Restaurant">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_Menu" layoutX="62.0" layoutY="505.0" mnemonicParsing="false" onAction="#goMenuBack" text="Menu" />
+      <ImageView fitHeight="172.0" fitWidth="189.0" layoutX="9.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/DMA9_2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="111.0" layoutX="743.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/icone_restaurant.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
