@@ -9,6 +9,7 @@ import Entities.Categorie;
 import Entities.OffreTravail;
 import Entities.ProduitPlat;
 import Entities.Restaurant;
+import Entities.Produit;
 import Entities.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +27,9 @@ public class PiJAVA extends Application {
     public static String reset_mail;
     public static Restaurant resshow ;  
      public static Categorie resshow2 ; 
-     public static ProduitPlat resshow3 ; 
+     public static ProduitPlat resshow3 ;
+     public static final String CURRENCY = "TND";
+    public static Produit entshow;
 
     @Override
     public void start(Stage stage) throws Exception {

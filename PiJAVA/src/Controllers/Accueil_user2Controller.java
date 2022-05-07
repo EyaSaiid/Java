@@ -79,8 +79,16 @@ public class Accueil_user2Controller implements Initializable{
     }   
 
     @FXML
-    void ShowBoutique(ActionEvent event) {
+    void ShowBoutique(ActionEvent event) throws IOException {
+        
+          Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/frontcontroller.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
 
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
     }
 
     @FXML

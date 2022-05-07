@@ -16,7 +16,7 @@
         <URL value="@acceuil_admin.css" />
     </stylesheets>
     <left>
-      <VBox maxWidth="-Infinity" prefHeight="399.0" prefWidth="174.0" style="-fx-background-color: #2ab867" BorderPane.alignment="CENTER">
+      <VBox maxWidth="-Infinity" prefHeight="631.0" prefWidth="213.0" style="-fx-background-color: #2ab867" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" styleClass="hover_border">
                <padding>
@@ -96,15 +96,23 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
-                  <Button fx:id="btn_Gestion_Event" onAction="#Menu_Rest" style="-fx-font-family: Quicksand; -fx-background-color: none;  -fx-fill: #485460;" text="Gestion_Evénements">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Button>
+                  <HBox fx:id="goent1" alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="btn_Gestion_Category" mnemonicParsing="false" onAction="#Menu_Catg" style="-fx-font-family: Quicksand; -fx-background-color: none;  -fx-fill: #485460;" text="Gestion category">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </HBox>
-            <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="213.0" VBox.vgrow="ALWAYS">
                <children>
+                  <Button fx:id="btn_Gestion_Event" onAction="#Menu_Rest" style="-fx-font-family: Quicksand; -fx-background-color: none;  -fx-fill: #485460;" text="Gestion_Evénements" />
                   <HBox alignment="CENTER_LEFT" styleClass="hover_border">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -122,7 +130,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                      <children>
-                        <Button fx:id="btn_Logout" onAction="#Logout" style="-fx-font-family: Quicksand;  -fx-fill: #485460;" text="Logout">
+                        <Button fx:id="btn_Logout" onAction="#Logout" prefHeight="31.0" prefWidth="82.0" style="-fx-font-family: Quicksand;  -fx-fill: #485460;" text="Logout">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -137,7 +145,7 @@
    <top>
       <HBox style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="70.0" prefWidth="175.0" style="-fx-background-color: #fabb55;">
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="89.0" prefWidth="212.0" style="-fx-background-color: #fabb55;">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
