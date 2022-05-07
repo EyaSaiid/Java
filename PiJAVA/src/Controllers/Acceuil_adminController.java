@@ -61,6 +61,8 @@ public class Acceuil_adminController implements Initializable {
     private Button btn_Logout;
     @FXML
     private Button btn_Gestion_jobs;
+    @FXML
+    private Button btn_Gestion_category;
 
     /**
      * Initializes the controller class.
@@ -102,7 +104,15 @@ public class Acceuil_adminController implements Initializable {
     }
 
     @FXML
-    private void Menu_Prod(ActionEvent event) {
+    private void Menu_Prod(ActionEvent event) throws IOException {
+         Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/AfficherProduit.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
     }
 
     @FXML
@@ -116,6 +126,18 @@ public class Acceuil_adminController implements Initializable {
         } else {
             alert.close();
         }
+    }
+
+    @FXML
+    private void Menu_Prods(ActionEvent event) throws IOException {
+        Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/AfficherCategory.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show();
     }
 
     

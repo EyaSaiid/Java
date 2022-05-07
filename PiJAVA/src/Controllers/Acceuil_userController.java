@@ -100,5 +100,17 @@ public class Acceuil_userController implements Initializable {
                         home.setScene(sc);
                         home.show();
     }
+
+    @FXML
+    private void btn_produit(ActionEvent event) throws IOException {
+          Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/frontcontroller.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+    }
     
 }

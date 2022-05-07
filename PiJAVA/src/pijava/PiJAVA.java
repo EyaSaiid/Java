@@ -6,6 +6,7 @@
 package pijava;
 
 import Entities.OffreTravail;
+import Entities.Produit;
 import Entities.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,8 @@ public class PiJAVA extends Application {
     public static User user;
     public static OffreTravail offreshow ;  
     public static String reset_mail;
+     public static final String CURRENCY = "TND";
+    public static Produit entshow;
 
     @Override
     public void start(Stage stage) throws Exception {

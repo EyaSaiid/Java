@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/SignInController.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/SignUpController.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/SendCodeController.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Utils/JavaMailUtil.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Utils/JavaMailResetUtil.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/ResetController.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Services/UserService.java</file>
-            <file>file:/C:/Users/SAID%20EYA/Desktop/GitJava/Java/PiJAVA/src/Controllers/ProfileUserController.java</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/GUI/AccueilBack.fxml</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/Controllers/AfficherCategoryController.java</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/Controllers/Acceuil_adminController.java</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/Controllers/AjouterCategoryController.java</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/GUI/testeya.fxml</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/Controllers/AfficherProduitController.java</file>
+            <file>file:/C:/Users/Nour%20Hammami/Desktop/GitJava/Java/Java/PiJAVA/src/Controllers/AjouterProduitController.java</file>
         </group>
     </open-files>
 </project-private>
