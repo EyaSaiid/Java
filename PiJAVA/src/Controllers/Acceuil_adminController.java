@@ -115,18 +115,7 @@ public class Acceuil_adminController implements Initializable {
         window.show(); 
     }
 
-    @FXML
-    private void Logout(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Vous allez quitter l'application");
-        alert.setHeaderText("Vous allez quitter l'application");
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) {
-            System.exit(0);
-        } else {
-            alert.close();
-        }
-    }
+   
 
     @FXML
     private void Menu_Prods(ActionEvent event) throws IOException {
@@ -139,7 +128,19 @@ public class Acceuil_adminController implements Initializable {
         window.setScene(gestionViewScene);
         window.show();
     }
-
+    
+ @FXML
+    private void Logout(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Vous allez quitter l'application");
+        alert.setHeaderText("Vous allez quitter l'application");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            System.exit(0);
+        } else {
+            alert.close();
+        }
+    }
     
     
 }
