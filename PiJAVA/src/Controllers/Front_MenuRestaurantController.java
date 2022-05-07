@@ -92,8 +92,7 @@ public class Front_MenuRestaurantController implements Initializable {
     @FXML
     private Button Logout;
 
-    @FXML
-    private TextField search;
+   
 
     @FXML
     private VBox chosenEntreprise;

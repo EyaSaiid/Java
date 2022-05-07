@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -117,38 +115,18 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="200.0" prefWidth="300.0" styleClass="right-bar" BorderPane.alignment="CENTER">
+      <VBox prefHeight="600.0" prefWidth="362.0" styleClass="right-bar" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="96.0" prefWidth="300.0">
                <children>
-                  <Label text="Restaurant" textFill="#878787">
+                  <Label text="Menu" textFill="#878787">
                      <font>
                         <Font name="Cambria Bold" size="40.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="240.0">
-               <VBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </VBox.margin>
-               <children>
-                  <TextField fx:id="search" prefHeight="40.0" prefWidth="146.0" promptText="Type here to search" styleClass="transparent">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font name="Cambria" size="12.0" />
-                     </font>
-                  </TextField>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="67.0" styleClass="search-button" text="Search" textFill="WHITE" />
-               </children>
-               <styleClass>
-                  <String fx:value="search-box" />
-                  <String fx:value="shadow" />
-               </styleClass>
-            </HBox>
-            <VBox fx:id="chosenEntreprise" alignment="CENTER" prefHeight="388.0" prefWidth="260.0" styleClass="chosen-entreprise-card">
+            <VBox fx:id="chosenEntreprise" alignment="CENTER" prefHeight="399.0" prefWidth="333.0" styleClass="chosen-entreprise-card">
                <VBox.margin>
                   <Insets left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
@@ -178,7 +156,7 @@
                               <Font name="Cambria" size="23.0" />
                            </font>
                         </Label>
-                        <Label fx:id="l_prix" prefHeight="44.0" prefWidth="122.0" text=".." textFill="WHITE">
+                        <Label fx:id="l_prix" prefHeight="44.0" prefWidth="137.0" text=".." textFill="WHITE">
                            <font>
                               <Font name="Cambria" size="22.0" />
                            </font>
@@ -192,7 +170,7 @@
                               <Font name="Cambria" size="23.0" />
                            </font>
                         </Label>
-                        <Label fx:id="l_desc" prefHeight="44.0" prefWidth="122.0" text=".." textFill="WHITE">
+                        <Label fx:id="l_desc" prefHeight="110.0" prefWidth="189.0" text=".." textFill="WHITE">
                            <font>
                               <Font name="Cambria" size="22.0" />
                            </font>

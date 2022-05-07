@@ -226,7 +226,7 @@ public class AjouterReservationController implements Initializable {
            Restaurant cat = Restaurant.getSelectionModel().getSelectedItem();
         id=cat.getId_restaurant();
 
-       pps.add(new Reservation(Integer.parseInt(Nombre.getText()),java.sql.Date.valueOf(Datep.getValue().toString()), 34, id ));
+       pps.add(new Reservation(Integer.parseInt(Nombre.getText()),java.sql.Date.valueOf(Datep.getValue().toString()),PiJAVA.user.getId(), id ));
        JOptionPane.showMessageDialog(null, "Reservation ajoutée avec succés");
        send();
        }
