@@ -155,6 +155,7 @@ public class UserService implements IserviceUser<User> {
             PreparedStatement pst = cnx.prepareStatement(requete);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
+                
                 User p = new User();
                 ImageView photo = new ImageView(new Image(this.getClass().getResourceAsStream("/Images/"+rs.getString(11))));     
                //ImageView photo = new ImageView(new Image(this.getClass().getResourceAsStream("/Images/eya.jpg")));     
@@ -166,12 +167,13 @@ public class UserService implements IserviceUser<User> {
                 list.add(new User(rs.getInt(1),rs.getString(2), rs.getString(3), 
                         rs.getDate(4), rs.getString(5), rs.getInt(6),rs.getString(7), rs.getString(8)
                         , rs.getString(9),rs.getInt(10),photo ));
-
+                
             }
 
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
+        System.out.println(list);
         return list;
 
 

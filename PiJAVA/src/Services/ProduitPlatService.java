@@ -102,7 +102,7 @@ public class ProduitPlatService implements IServiceRestaurant<ProduitPlat>{
         System.out.println(rst.toString());
         
         while(rst.next()){
-           ProduitPlat p = new ProduitPlat(rst.getInt("id_produitplat"),rst.getString("nom_produitplat"),rst.getFloat(3),rst.getString("desc_produitplat"),rst.getInt(1));
+           ProduitPlat p = new ProduitPlat(rst.getInt("id_produitplat"),rst.getString("nom_produitplat"),rst.getFloat("prix"),rst.getString("desc_produitplat"),rst.getInt("id_categorie"));
             categories.add(p);
               } 
         

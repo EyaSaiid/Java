@@ -104,7 +104,7 @@ public class CategorieService implements IServiceRestaurant<Categorie>  {
         //List<Categorie> categories = new ArrayList<Categorie>();
         while(rst.next()){
             
-            Categorie p = new Categorie(rst.getInt(2),rst.getString("nom_categorie"));
+            Categorie p = new Categorie(rst.getInt("id_categorie"),rst.getString("nom_categorie"));
             categories.add(p);
             
         

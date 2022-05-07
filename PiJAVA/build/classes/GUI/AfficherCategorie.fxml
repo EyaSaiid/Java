@@ -33,7 +33,7 @@
             <Font name="Arial" size="47.0" />
          </font>
       </Label>
-      <Pagination fx:id="pagination" layoutX="168.0" layoutY="283.0" prefHeight="311.0" prefWidth="767.0" />
+      <Pagination fx:id="pagination" layoutX="168.0" layoutY="234.0" prefHeight="360.0" prefWidth="767.0" />
       <ImageView fitHeight="93.0" fitWidth="129.0" layoutX="22.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/DMA9_2.jpg" />

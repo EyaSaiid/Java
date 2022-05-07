@@ -56,7 +56,6 @@ public class AfficherCategorieController implements Initializable {
 
     @FXML
     private TableColumn<Categorie, String> Col_NomCategorie;
-
     @FXML
     private TableColumn Col_Update;
 
@@ -66,7 +65,7 @@ public class AfficherCategorieController implements Initializable {
     private TextField NomCategorie;
     @FXML
     private Label l_NomCategorie;
-   @FXML
+    @FXML
     private Button btn_update;
     @FXML
     private Button btn_Retour;
@@ -128,20 +127,7 @@ public class AfficherCategorieController implements Initializable {
             return cell;   
         };
         Col_delete.setCellFactory(cellFactory);
-        
-      
-        
-        
-        
-        
-       ///////////////////////////////////////////////////////
-       
-       
-       
-   
-    
-    ////////////////////////////////////////////////////////////////////////
-        
+
         
 //POUR MODIFIER
         
@@ -309,7 +295,6 @@ public class AfficherCategorieController implements Initializable {
     
     
     
-    
      public int filpag() {
         return 3;
     }
@@ -319,7 +304,6 @@ public class AfficherCategorieController implements Initializable {
         int fromIndex = pagIndex * filpag();
         int toIndex = Math.min(fromIndex + filpag(), db.size());
         Table_Categorie.setItems(FXCollections.observableArrayList(db.subList(fromIndex, toIndex)));
-
         return new BorderPane(Table_Categorie);
 
     }
