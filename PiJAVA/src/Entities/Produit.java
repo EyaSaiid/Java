@@ -239,7 +239,7 @@ public class Produit {
 
         try {
 
-            PdfWriter.getInstance(document, new FileOutputStream("C:\\Users\\Nour Hammami\\Documents\\NetBeansProjects\\PIJavaFX\\src\\Apis\\"+String.valueOf(DateAuj + "produit.pdf")));//yyyy-MM-dd
+            PdfWriter.getInstance(document, new FileOutputStream("C:\\Users\\Nour Hammami\\Desktop\\GitJava\\Java\\Java\\PiJAVA\\src\\Apis\\"+String.valueOf(DateAuj + "produit.pdf")));//yyyy-MM-dd
             document.open();
             Paragraph ph1 = new Paragraph("Rapport pour les produits : " + DateRapport);
             Paragraph ph2 = new Paragraph(".");

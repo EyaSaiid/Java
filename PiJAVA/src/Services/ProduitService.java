@@ -357,7 +357,7 @@ if(row>0)
   
   public void qr(Produit r) throws WriterException, UnsupportedEncodingException, IOException{
          String qrCodeData = r.getNomProduit();
-            String filePath = "C:\\Users\\Nour Hammami\\Documents\\NetBeansProjects\\PIJavaFX\\src\\qrcode\\produitQR.png";
+            String filePath = "C:\\Users\\Nour Hammami\\Desktop\\GitJava\\Java\\Java\\PiJAVA\\src\\qrcode\\produitQR.png";
             String charset = "UTF-8"; 
             Map < EncodeHintType, ErrorCorrectionLevel > hintMap = new HashMap < EncodeHintType, ErrorCorrectionLevel > ();
             hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);

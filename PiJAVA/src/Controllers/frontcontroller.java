@@ -25,11 +25,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class frontcontroller implements Initializable {
     @FXML
@@ -44,8 +53,6 @@ public class frontcontroller implements Initializable {
     @FXML
     private ImageView fruitImg;
 
-    @FXML
-    private ScrollPane scroll;
 
     @FXML
     private GridPane grid;
@@ -58,10 +65,37 @@ public class frontcontroller implements Initializable {
     @FXML
     private Label DescLabel;
   
-    @FXML
     private TextField search;
     @FXML
     private Label pont;
+    @FXML
+    private ScrollPane scroll;
+    @FXML
+    private HBox goacc;
+    @FXML
+    private HBox rest1;
+    @FXML
+    private Button rest;
+    @FXML
+    private Button btnreservation;
+    @FXML
+    private HBox jobs1;
+    @FXML
+    private Button jobs;
+    @FXML
+    private HBox prod1;
+    @FXML
+    private Button prod;
+    @FXML
+    private HBox event1;
+    @FXML
+    private Button event;
+    @FXML
+    private ImageView photo;
+    @FXML
+    private Text nom_prenom;
+    @FXML
+    private Button Logout;
 
     private List<Produit> getData() {
         List<Produit> fruits = new ArrayList<>();
@@ -128,6 +162,7 @@ public class frontcontroller implements Initializable {
 
     @FXML
     private void triNom(ActionEvent event) {
+        grid.getChildren().clear();
         ProduitService se=new ProduitService();
         List<Produit> lee=se.trierProduitNomdesc();
 //        search.setOnKeyReleased(e->{ search(); });
@@ -181,6 +216,7 @@ public class frontcontroller implements Initializable {
 
     @FXML
     private void TriNomC(ActionEvent event) {
+        grid.getChildren().clear();
           ProduitService se=new ProduitService();
         List<Produit> lee=se.trierProduitNomAsc();
 //        search.setOnKeyReleased(e->{ search(); });
@@ -234,6 +270,7 @@ public class frontcontroller implements Initializable {
 
     @FXML
     private void triPrixD(ActionEvent event) {
+        grid.getChildren().clear();
             ProduitService se=new ProduitService();
         List<Produit> lee=se.trierProduitPrixDsc();
 //        search.setOnKeyReleased(e->{ search(); });
@@ -287,7 +324,9 @@ public class frontcontroller implements Initializable {
 
     @FXML
     private void TriPrixA(ActionEvent event) {
-           ProduitService se=new ProduitService();
+      grid.getChildren().clear();
+         ProduitService se=new ProduitService();
+         GridPane.clearConstraints(grid);
         List<Produit> lee=se.trierProduitPrixAsc();
 //        search.setOnKeyReleased(e->{ search(); });
   
@@ -339,28 +378,185 @@ public class frontcontroller implements Initializable {
     }
 
 
+//    private void connecter(ActionEvent event) {
+//         try {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/AccueilBack.fxml"));
+//            Parent root = loader.load();
+//            pont.getScene().setRoot(root);
+//        } catch (IOException ex) {
+//            System.out.println(ex.getMessage());
+//          //  Logger.getLogger(AccueilBackController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+//
+//    private void produitF(ActionEvent event) {
+//        try {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/frontcontroller.fxml"));
+//            Parent root = loader.load();
+//          pont.getScene().setRoot(root);
+//        } catch (IOException ex) {
+//            System.out.println(ex.getMessage());
+//          //  Logger.getLogger(AccueilBackController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+//
+//    @FXML
+//    private void goacc(MouseEvent event) {
+//    }
+//
+//    @FXML
+//    private void gorestaurant(ActionEvent event) throws IOException {
+//         Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/Front_Restaurants.fxml"));
+//        Scene gestionViewScene = new Scene(gestionView);
+//
+//        //les informations du stage
+//        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+//
+//        window.setScene(gestionViewScene);
+//        window.show(); 
+//
+//    }
+//
+//    @FXML
+//    private void goreservation(ActionEvent event) throws IOException {
+//           Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/AjouterReservation.fxml"));
+//        Scene gestionViewScene = new Scene(gestionView);
+//
+//        //les informations du stage
+//        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+//
+//        window.setScene(gestionViewScene);
+//        window.show(); 
+//    }
+//
+//    @FXML
+//    private void showJobs(ActionEvent event) throws IOException {
+//        Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/acceuil_jobs.fxml"));
+//        Scene gestionViewScene = new Scene(gestionView);
+//
+//        //les informations du stage
+//        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+//
+//        window.setScene(gestionViewScene);
+//        window.show(); 
+//    }
+//
+//    @FXML
+//    private void ShowBoutique(ActionEvent event) throws IOException {
+//           Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/frontcontroller.fxml"));
+//        Scene gestionViewScene = new Scene(gestionView);
+//
+//        //les informations du stage
+//        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+//
+//        window.setScene(gestionViewScene);
+//        window.show(); 
+//    }
+//    
+//
+//    @FXML
+//    private void ShowEvent(ActionEvent event) {
+//    }
+//
+//    @FXML
+//    private void goProfile(MouseEvent event) throws IOException {
+//          Stage home = new Stage();
+//        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/ProfileUser.fxml"));
+//                        Scene sc = new Scene(fxml);
+//                        home.setScene(sc);
+//                        home.show();
+//    }
+//
+//    @FXML
+//    private void logout(ActionEvent event) {
+//             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//        alert.setTitle("Vous allez quitter l'application");
+//        alert.setHeaderText("Vous allez quitter l'application");
+//        Optional<ButtonType> result = alert.showAndWait();
+//        if (result.get() == ButtonType.OK) {
+//            System.exit(0);
+//        } else {
+//            alert.close();
+//        }
+//    }
+
     @FXML
-    private void connecter(ActionEvent event) {
-         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/AccueilBack.fxml"));
-            Parent root = loader.load();
-            pont.getScene().setRoot(root);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-          //  Logger.getLogger(AccueilBackController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    private void goacc(MouseEvent event) {
     }
 
     @FXML
-    private void produitF(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/frontcontroller.fxml"));
-            Parent root = loader.load();
-          pont.getScene().setRoot(root);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-          //  Logger.getLogger(AccueilBackController.class.getName()).log(Level.SEVERE, null, ex);
+    private void gorestaurant(ActionEvent event) throws IOException {
+          Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/Front_Restaurants.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+    }
+
+    @FXML
+    private void goreservation(ActionEvent event) throws IOException {
+          Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/AjouterReservation.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+    }
+
+    @FXML
+    private void showJobs(ActionEvent event) throws IOException {
+         Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/acceuil_jobs.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+    }
+
+    @FXML
+    private void ShowBoutique(ActionEvent event) throws IOException {
+            Parent gestionView = FXMLLoader.load(getClass().getResource("/GUI/frontcontroller.fxml"));
+        Scene gestionViewScene = new Scene(gestionView);
+
+        //les informations du stage
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+
+        window.setScene(gestionViewScene);
+        window.show(); 
+    }
+
+    @FXML
+    private void ShowEvent(ActionEvent event) {
+    }
+
+    @FXML
+    private void goProfile(MouseEvent event) throws IOException {
+            Stage home = new Stage();
+        Parent fxml = FXMLLoader.load(getClass().getResource("/GUI/ProfileUser.fxml"));
+                        Scene sc = new Scene(fxml);
+                        home.setScene(sc);
+                        home.show();
+    }
+
+    @FXML
+    private void logout(ActionEvent event) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Vous allez quitter l'application");
+        alert.setHeaderText("Vous allez quitter l'application");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            System.exit(0);
+        } else {
+            alert.close();
         }
+
     }
 
    

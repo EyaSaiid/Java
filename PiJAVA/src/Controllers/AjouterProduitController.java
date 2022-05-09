@@ -223,7 +223,7 @@ public class AjouterProduitController implements Initializable {
     Image getAbsolutePath = null;
     
    
-    String dd="C:\\Users\\Nour Hammami\\Documents\\NetBeansProjects\\PIJavaFX\\src\\img\\"+f.getName()  ;
+    String dd="C:\\Users\\Nour Hammami\\Desktop\\GitJava\\Java\\Java\\PiJAVA\\src\\Images\\"+f.getName()  ;
     File dest = new File(dd);
     this.copyFile(f,dest);
    
